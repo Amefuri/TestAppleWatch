@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="TestAppleWatch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="1" alignment="left" text="Recieved Message : xxxx" textAlignment="center" minimumScaleFactor="0.10000000000000001" id="e1A-2k-0Uc">
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                        </label>
+                        <label width="136" alignment="left" text="Self Counter : 0" textAlignment="center" minimumScaleFactor="0.10000000000000001" id="zoQ-XU-kZ3">
+                            <fontDescription key="font" type="system" pointSize="8"/>
+                        </label>
+                        <label width="1" alignment="left" text="Fetch Data : xxxx" textAlignment="center" minimumScaleFactor="0.5" id="9uX-vT-cKM">
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                        </label>
+                        <button width="1" height="30" alignment="left" title="Increase" id="sQW-WO-XaJ">
+                            <connections>
+                                <action selector="didClickOnIncrease" destination="AgC-eL-Hgc" id="ya8-Vp-OLl"/>
+                            </connections>
+                        </button>
+                        <button width="1" height="30" alignment="left" title="Send" id="wL5-9y-syf">
+                            <connections>
+                                <action selector="didClickOnSend" destination="AgC-eL-Hgc" id="7km-3c-9p1"/>
+                            </connections>
+                        </button>
+                        <button width="1" height="30" alignment="left" title="Go" id="j7A-6Y-x0Q">
+                            <connections>
+                                <action selector="didClickOnGo" destination="AgC-eL-Hgc" id="bAK-VZ-Zzv"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="debugLbl" destination="e1A-2k-0Uc" id="wjp-fe-soG"/>
+                        <outlet property="fetchDataLbl" destination="9uX-vT-cKM" id="HmQ-bA-JJr"/>
+                        <outlet property="selfCounterLbl" destination="zoQ-XU-kZ3" id="kwA-50-qn5"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--ScreenMockCompass-->
+        <scene sceneID="zQO-tD-RCu">
+            <objects>
+                <controller identifier="ScreenMockCompass" id="M1s-6c-D4Z">
+                    <items>
+                        <group width="1" height="1" alignment="left" layout="vertical" spacing="0.0" id="6NS-2s-k7o">
+                            <items>
+                                <label width="1" height="12" alignment="left" text="ATM Location" textAlignment="center" baselineAdjustment="alignCenters" numberOfLines="2" minimumScaleFactor="0.10000000000000001" id="cMN-Pj-pJb">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </label>
+                                <label width="1" height="9" alignment="left" text="2nd floor" textAlignment="center" minimumScaleFactor="0.10000000000000001" id="UQk-pe-GBa">
+                                    <fontDescription key="font" type="system" pointSize="8"/>
+                                </label>
+                                <imageView width="1" alignment="left" image="Mock_Screen" contentMode="scaleAspectFit" id="DRu-Ps-sd8"/>
+                            </items>
+                            <color key="backgroundColor" red="0.18823529411764706" green="0.2196078431372549" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="431" y="350"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="jq3-5E-ynH">
+            <objects>
+                <controller id="xU8-YA-Sm8">
+                    <items>
+                        <label alignment="left" text="Label" id="Nmu-bc-Dva"/>
+                        <label alignment="left" text="Label" id="wSD-4O-1ff"/>
+                        <label alignment="left" text="Label" id="fTd-6r-5M0"/>
+                        <group width="1" alignment="left" id="YmQ-fX-xTZ">
+                            <items>
+                                <activity width="50" height="50" alignment="left" id="NEz-9a-dij"/>
+                                <label alignment="left" text="100%" id="v0M-2i-mQm"/>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="645" y="350"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="TestAppleWatch_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+</document>
